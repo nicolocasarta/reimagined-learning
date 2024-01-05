@@ -1,10 +1,10 @@
+from cards import handReformat
 
 
-
-#check if user action match the correct response
+#check if user action matches the correct response
 def responseCheck(position, hand, action):
 
-    hand = handFormat(hand)
+    hand = handReformat(hand)
 
     if (action == properResponse(position, hand)):
         print("Your decision to " + action.upper() + " was CORRECT!")
@@ -36,18 +36,8 @@ def utgResponse(hand):
     return "fold"
 
 
-#reformat user hand to match the format in goodHands array
-def handFormat(hand):
 
-    #if card values match, suited or unsuited designation is not needed
-    if hand[0] == hand[2]:
-        newHand = hand[0] + hand[2]
 
-        return newHand
-
-#TODO: if suits match, make newHand = to the value of the cards and place an s at the end eg. aks
-#      if suits do not match, place o at the end eg. ako
-#      write a funaction that makes sure the higher value card comes first eg. aks not kas
 
 
 
