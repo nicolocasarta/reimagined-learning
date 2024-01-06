@@ -51,7 +51,10 @@ def handReorder(hand):
         return newHand
     
     #if the card values are numeric, then place higher number in first position
-    elif hand[0] < hand[1]:
+    elif (hand[0] < hand[1] and hand[0] < 'a'):
         newHand = hand[1] + hand[0] + hand[2]
         return newHand
+    
+    #if order is correct, return hand
+    return hand
     
