@@ -42,11 +42,11 @@ def utgResponse(hand):
 
 
 #test code
-user_position = input("Enter position: ")
-user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
-user_action = input("Enter action (raise or fold): ")
+# user_position = input("Enter position: ")
+# user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
+# user_action = input("Enter action (raise or fold): ")
 
-responseCheck(user_position, user_hand, user_action)
+# responseCheck(user_position, user_hand, user_action)
 
 
 
