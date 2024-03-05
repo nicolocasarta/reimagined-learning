@@ -24,8 +24,8 @@ def utgResponse(hand):
 
     #hands that the user should raise when in utg position
     goodHands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-    "ako", "aqo", "kk", "kqs", "kjs", "kts", "k9s", "kqo", "qq", "qjs", "qts", "jj", "jts", "tt", "t9s", 
-    "99", "88", "77", "66","65s", "55", "54s"]
+    "ako", "aqo", "kk", "kqs", "kjs", "kts", "k9s", "kqo", "qq", "qjs", "qts", "jj", "jts", "tt", "99",
+    "88", "77", "65s"]
 
     #loop through good hands
     for i in goodHands:
@@ -40,8 +40,7 @@ def utgResponse(hand):
 
 
 
-
-#test code
+# # test code
 # user_position = input("Enter position: ")
 # user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
 # user_action = input("Enter action (raise or fold): ")

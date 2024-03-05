@@ -1,4 +1,5 @@
 import source.cards
 
-def test_handReorder():
-    assert source.cards.handReorder("kao") == "ako"
+
+def test_handReformat():
+    assert source.cards.handReformat("askd") == "ako"

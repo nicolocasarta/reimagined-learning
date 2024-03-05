@@ -1,49 +1,11 @@
-import source.responseCheck
 import pytest
-
-
-@pytest.mark.parametrize(
-    ("input_n, expected"),
-    (
-        ("aa", "raise"),
-        ("aks", "raise"),
-        ("aqs", "raise"),
-        ("ajs", "raise"),
-        ("ats", "raise"),
-        ("a9s", "raise"),
-        ("a8s", "raise"),
-        ("a7s", "raise"),
-        ("a6s", "raise"),
-        ("a5s", "raise"),
-        ("a4s", "raise"),
-        ("a3s", "raise"),
-        ("ako", "raise"),
-        ("aqo", "raise"),
-        ("kk", "raise"),
-        ("kqs", "raise"),
-        ("kjs", "raise"),
-        ("kts", "raise"),
-        ("k9s", "raise"),
-        ("kqo", "raise"),
-        ("qq", "raise"),
-        ("qjs", "raise"),
-        ("qts", "raise"),
-        ("jj", "raise"),
-        ("jts", "raise"),
-        ("tt", "raise"),
-        ("t9s", "raise"), 
-        ("99", "raise"),
-        ("88", "raise"),
-        ("77", "raise"),
-        ("66", "raise"),
-        ("65s", "raise"),
-        ("55", "raise"),
-        ("54s", "raise"),
-    )
-)
+from source import responseCheck
+from tests.utils.util import get_data
 
 
 
-def test_utgResponse(input_n, expected):
-    assert source.responseCheck.utgResponse(input_n) == expected
+@pytest.mark.parametrize("input, expected_result", get_data("utg_responses_test.txt"))
+def test_utgResponse(input, expected_result):
+    assert responseCheck.utgResponse(input) == expected_result
+
 
