@@ -4,7 +4,7 @@ from tests.utils.util import get_data
 
 
 
-@pytest.mark.parametrize("input, expected_result", get_data("utg_responses_test.txt"))
+@pytest.mark.parametrize("input, expected_result", get_data("utg_responses_test.csv"))
 def test_utgResponse(input, expected_result):
     assert responseCheck.utgResponse(input) == expected_result
 

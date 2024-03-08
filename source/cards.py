@@ -25,35 +25,37 @@ def handReformat(hand):
 #reorder the user hand: card of higher value comes before card of lower value   
 def handReorder(hand):
 
+    if(hand[0] == hand[1]):
+        return hand
     #if 'a' is in second position, place it in first position
-    if (hand[1] == 'a'):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+    elif (hand[1] == 'a'):
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
 
     #if 'k' is in the second position, but a higher value than first position, swap places
     elif (hand[1] == 'k' and hand[0] != 'a'):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
 
     #if 'q' is in the second position, but a higher value than first position, swap places
     elif (hand[1] == 'q' and (hand[0] != 'a' and hand[0] != 'k')):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
     
     #if 'j' is in the second position, but a higher value than first position, swap places
     elif (hand[1] == 'j' and (hand[0] != 'a' and hand[0] != 'k' and hand[0] != 'q')):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
     
     #if 't' is in the second position, but a higher value than first position, swap places
     elif(hand[1] == 't' and (hand[0] != 'a' and hand[0] != 'k' and hand[0] != 'q' and hand[0] != 'j')):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
     
     #if the card values are numeric, then place higher number in first position
     elif (hand[0] < hand[1] and hand[0] < 'a'):
-        newHand = hand[1] + hand[0] + hand[2]
-        return newHand
+        reordered_hand = hand[1] + hand[0] + hand[2]
+        return reordered_hand
     
     #if order is correct, return hand
     return hand
