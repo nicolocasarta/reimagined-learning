@@ -1,6 +1,7 @@
-
 from source.responseCheck import responseCheck
-from tests.utils.util import get_data
+from source.cards import handReformat
+from source.cards import handReorder
+
 
 
 def main(): 
@@ -8,9 +9,10 @@ def main():
     user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
     user_action = input("Enter action (raise or fold): ")
 
-    responseCheck(user_position, user_hand, user_action)
-    print(get_data())
+    simple_hand = handReformat(user_hand)
+    simple_hand = handReorder(simple_hand)
+    responseCheck(user_position, simple_hand, user_action)
     
-
+    
 if __name__ == "__main__":
     main()

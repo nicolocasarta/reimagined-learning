@@ -4,7 +4,7 @@ from source.cards import handReformat
 #check if user action matches the correct response
 def responseCheck(position, hand, action):
 
-    hand = handReformat(hand)
+    
 
     if (action == properResponse(position, hand)):
         print("Your decision to " + action.upper() + " was CORRECT!")
@@ -40,12 +40,6 @@ def utgResponse(hand):
 
 
 
-# # test code
-# user_position = input("Enter position: ")
-# user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
-# user_action = input("Enter action (raise or fold): ")
-
-# responseCheck(user_position, user_hand, user_action)
 
 
 
