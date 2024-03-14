@@ -4,7 +4,8 @@ def check_poker_move(position, hand, action):
         return 'Error: Only UTG position is acceptable.'
 
     # Check Hand
-    # For simplicity, we are assuming any two cards input is valid
+    if len(hand) != 4:
+        return 'Error: Invalid Poker Hand' 
 
     #Valid cards
     cardArray = ['a','k','q','j','2','3','4','5','6','7','8','9','t']
@@ -37,8 +38,6 @@ def check_poker_move(position, hand, action):
     if valid != 4:
         return 'Error: Invalid Poker Hand'  
     
-    if len(hand) != 4:
-        return 'Error: Invalid Poker Hand' 
     
     if hand[0] == hand[2]:
         if hand[1] == hand[3]:
