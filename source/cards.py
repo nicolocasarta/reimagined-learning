@@ -1,6 +1,21 @@
 
-#reformat user hand to match the format in goodHands array
-def handReformat(hand):
+RANK_DICT = {
+    "2": 0,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 7,
+    "t": 8,
+    "j": 9,
+    "q": 10,
+    "k": 11,
+    "a": 12
+}
+#reformat user hand into the proper format
+def hand_reformat(hand):
 
     #if card values match, suited or unsuited designation is not needed
     if hand[0] == hand[2]:
@@ -23,42 +38,27 @@ def handReformat(hand):
 
    
 #reorder the user hand: card of higher value comes before card of lower value   
-def handReorder(hand):
+def hand_reorder(hand):
 
-    #if card values match, there is no need to reorder
-    if(hand[0] == hand[1]):
+    first_card_rank = hand[0]
+    second_card_rank = hand[1]
+
+    # if the ranks of the cards are the same, there is no need to reorder
+    if first_card_rank == second_card_rank:
         return hand
     
-    #if 'a' is in second position, place it in first position
-    elif (hand[1] == 'a'):
+    # if the rank of the card in the first position is lower, switch the positions
+    elif RANK_DICT[first_card_rank] < RANK_DICT[second_card_rank]:
         reordered_hand = hand[1] + hand[0] + hand[2]
-        return reordered_hand
 
-    #if 'k' is in the second position, but a higher value than first position, swap places
-    elif (hand[1] == 'k' and hand[0] != 'a'):
-        reordered_hand = hand[1] + hand[0] + hand[2]
         return reordered_hand
+    
+    # otherwise the hand is in the correct order
+    else:
+        return hand
 
-    #if 'q' is in the second position, but a higher value than first position, swap places
-    elif (hand[1] == 'q' and (hand[0] != 'a' and hand[0] != 'k')):
-        reordered_hand = hand[1] + hand[0] + hand[2]
-        return reordered_hand
-    
-    #if 'j' is in the second position, but a higher value than first position, swap places
-    elif (hand[1] == 'j' and (hand[0] != 'a' and hand[0] != 'k' and hand[0] != 'q')):
-        reordered_hand = hand[1] + hand[0] + hand[2]
-        return reordered_hand
-    
-    #if 't' is in the second position, but a higher value than first position, swap places
-    elif(hand[1] == 't' and (hand[0] != 'a' and hand[0] != 'k' and hand[0] != 'q' and hand[0] != 'j')):
-        reordered_hand = hand[1] + hand[0] + hand[2]
-        return reordered_hand
-    
-    #if the card values are numeric, then place higher number in first position
-    elif (hand[0] < hand[1] and hand[0] < 'a'):
-        reordered_hand = hand[1] + hand[0] + hand[2]
-        return reordered_hand
-    
-    #if order is correct, return hand
-    return hand
+
+
+
+   
     

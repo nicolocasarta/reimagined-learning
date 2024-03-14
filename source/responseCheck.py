@@ -1,10 +1,7 @@
-from source.cards import handReformat
 
 
 #check if user action matches the correct response
 def responseCheck(position, hand, action):
-
-    
 
     if (action == properResponse(position, hand)):
         print("Your decision to " + action.upper() + " was CORRECT!")
