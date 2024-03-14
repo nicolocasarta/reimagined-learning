@@ -1,6 +1,6 @@
-def check_poker_move(Position, Hand, Action):
+def check_poker_move(position, hand, action):
     # Check Position
-    if Position != 'utg':
+    if position != 'utg':
         return 'Error: Only UTG position is acceptable.'
 
     # Check Hand
@@ -14,9 +14,9 @@ def check_poker_move(Position, Hand, Action):
     #Checks first and third position for valid card values
 
     for i in cardArray:
-        if Hand[0] == i:
+        if hand[0] == i:
             valid += 1
-        if Hand[2] == i:
+        if hand[2] == i:
             valid += 1
 
     if valid != 2:
@@ -29,24 +29,24 @@ def check_poker_move(Position, Hand, Action):
     #Checks second and fourth position for valid suit values
 
     for i in suitArray:
-        if Hand[1] == i:
+        if hand[1] == i:
             valid += 1
-        if Hand[3] == i:
+        if hand[3] == i:
             valid += 1
 
     if valid != 4:
         return 'Error: Invalid Poker Hand'  
     
-    if len(Hand) != 4:
+    if len(hand) != 4:
         return 'Error: Invalid Poker Hand' 
     
-    if Hand[0] == Hand[2]:
-        if Hand[1] == Hand[3]:
+    if hand[0] == hand[2]:
+        if hand[1] == hand[3]:
             return 'Error: Invalid Poker Hand'
 
 
     # Check Action
-    if Action.lower() not in ['raise', 'fold']:
+    if action.lower() not in ['raise', 'fold']:
         return 'Error: Action must be either "raise" or "fold".'
 
     # If all checks passed, return 'Correct'
