@@ -39,6 +39,10 @@ def check_poker_move(Position, Hand, Action):
     
     if len(Hand) != 4:
         return 'Error: Invalid Poker Hand' 
+    
+    if Hand[0] == Hand[2]:
+        if Hand[1] == Hand[3]:
+            return 'Error: Invalid Poker Hand'
 
 
     # Check Action
