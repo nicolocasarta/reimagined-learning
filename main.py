@@ -1,6 +1,7 @@
 from source.action_check import action_check
 from source.cards import to_simple_hand
 from source.cards import simple_hand_reorder
+from source.preflop import check_poker_move
 
 
 
@@ -8,6 +9,8 @@ def main():
     user_position = input("Enter position: ").lower()
     user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ").lower()
     user_action = input("Enter action (raise or fold): ").lower()
+
+    check_poker_move(user_position, user_hand, user_action)
 
     simple_hand = to_simple_hand(user_hand)
     simple_hand = simple_hand_reorder(simple_hand)
