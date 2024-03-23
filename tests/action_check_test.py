@@ -15,3 +15,7 @@ def test_preflop_utg1_action(input, expected_result):
 @pytest.mark.parametrize("input, expected_result", get_data("preflop_btn_action_test.csv"))
 def test_preflop_btn_action(input, expected_result):
     assert action_check.preflop_btn_action(input) == expected_result
+    
+@pytest.mark.parametrize("input, expected_result", get_data("preflop_lj_action_test.csv"))
+def test_preflop_lj_action(input, expected_result):
+    assert action_check.preflop_lj_action(input) == expected_result
