@@ -63,6 +63,8 @@ def preflop_btn_action(hand):
         return "raise"
     return "fold"
 
+
+
 def preflop_lj_action(hand):
     good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
                   "a2s", "ako", "kk", "kqs", "kjs", "kts", "k9s", "k8s", "k7s", "aqo", "kqo", "qq", "qjs", 
@@ -72,11 +74,6 @@ def preflop_lj_action(hand):
         return "raise"
     return "fold"
 
-
-
-    if hand in good_hands:
-        return "raise"
-    return "fold"
 
 
 
