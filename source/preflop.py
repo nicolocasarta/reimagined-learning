@@ -1,7 +1,9 @@
 def check_poker_move(position, hand, action):
+
+    accepted_positions = ["utg", "utg+1"]
     # Check Position
-    if position != 'utg':
-        return 'Error: Only UTG position is acceptable.'
+    if position not in accepted_positions:
+        return 'Error: Position Not Acceptable.'
 
     # Check Hand
     if len(hand) != 4:
@@ -50,11 +52,3 @@ def check_poker_move(position, hand, action):
 
     # If all checks passed, return 'Correct'
     return 'Correct'
-
-# Example usage:
-user_position = input("Enter position: ")
-user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ")
-user_action = input("Enter action (raise or fold): ")
-
-result = check_poker_move(user_position, user_hand, user_action)
-print(f"Result: {result}")
