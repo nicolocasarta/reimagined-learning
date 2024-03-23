@@ -9,3 +9,5 @@ def test_preflop_utg_action(input, expected_result):
     assert action_check.preflop_utg_action(input) == expected_result
 
 
+def test_preflop_utg1_action():
+    assert action_check.preflop_utg1_action("77") == "raise" 
