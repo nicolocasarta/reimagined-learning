@@ -44,8 +44,8 @@ def preflop_utg1_action(hand):
 
 def preflop_lj_action(hand):
     good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-                  "ako", "kk", "kqs", "kjs", "kts", "k9s", "k8s", "k7s", "aqo", "kqo", "qq", "qjs", 
-                  "qts", "ajo", "jj", "jts", "tt", "99", "88", "77", "66", "65s"]
+                  "a2s", "ako", "kk", "kqs", "kjs", "kts", "k9s", "k8s", "k7s", "aqo", "kqo", "qq", "qjs", 
+                  "qts", "ajo", "jj", "jts", "tt", "t9s", "99", "88", "77", "66", "65s"]
     
     if hand in good_hands:
         return "raise"
