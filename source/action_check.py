@@ -1,5 +1,6 @@
 from source.utils.util import jason_to_dict
 
+# dictionary that holds all preflop proper actions for a given hand
 PREFLOP_ACTION = jason_to_dict("preflop_action.json")
 
 #check if user action matches the correct response
@@ -25,61 +26,43 @@ def action_check(position, hand, action):
 
 
 def preflop_utg_action(hand):
-
+    # get dictionary at key, "utg_action"
     utg = PREFLOP_ACTION["utg_action"]
+    # get the action from the key associated with the hand
     action = utg[hand]
-
+    
     return action
 
-    # #hands that the user should raise when in utg position
-    # good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-    # "ako", "aqo", "kk", "kqs", "kjs", "kts", "k9s", "kqo", "qq", "qjs", "qts", "jj", "jts", "tt", "99",
-    # "88", "77", "65s"]
-
-    # # if the user's hand is a good hand, then raise
-    # if hand in good_hands:
-    #     return "raise"
-    # # otherwise fold
-    # return "fold"
 
 
 def preflop_utg1_action(hand):
-
-    good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-                  "ako", "kk", "kqs", "kjs", "kts", "k9s", "aqo", "kqo", "qq", "qjs", "qts", "ajo", 
-                  "jj", "jts", "tt", "t9s", "99", "88", "77", "65s"]
+    # get dictionary at key, "utg1_action"
+    utg1 = PREFLOP_ACTION["utg1_action"]
+    # get the action from the key associated with the hand
+    action = utg1[hand]
     
-    if hand in good_hands:
-        return "raise"
-    return "fold"
+    return action
    
 
 
 
 def preflop_btn_action(hand):
-    good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-                  "a2s", "ako", "kk", "kqs", "kjs", "kts", "k9s", "k8s", "k7s", "k6s", "k5s", "k4s", 
-                    "k3s", "k2s", "aqo", "kqo", "qq", "qjs", "qts", "q9s", "q8s", "q7s", "q6s", "q5s", 
-                    "q4s", "q3s", "ajo", "kjo", "qjo", "jj", "jts", "j9s", "j8s", "j7s", "j6s", "j5s",
-                     "ato", "kto", "qto", "jto", "tt", "t9s", "t8s", "t7s", "t6s", "a9o", "k9o", "q9o",
-                      "k9o", "q9o", "j9o", "t9o", "99", "98s", "97s", "96s", "a8o", "a7o", "a6o", "a5o",
-                       "a4o", "a3o", "88", "87s", "86s", "77", "76s", "75s", "66", "65s", "55", "54s", 
-                       "44", "33", "22" ]
+    # get dictionary at key, "btn_action"
+    btn = PREFLOP_ACTION["btn_action"]
+    # get the action from the key associated with the hand
+    action = btn[hand]
     
-    if hand in good_hands:
-        return "raise"
-    return "fold"
+    return action
 
 
 
 def preflop_lj_action(hand):
-    good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-                  "a2s", "ako", "kk", "kqs", "kjs", "kts", "k9s", "k8s", "k7s", "aqo", "kqo", "qq", "qjs", 
-                  "qts", "ajo", "jj", "jts", "tt", "t9s", "99", "88", "77", "66", "65s"]
+    # get dictionary at key, "lj_action"
+    lj = PREFLOP_ACTION["lj_action"]
+    # get the action from the key associated with the hand
+    action = lj[hand]
     
-    if hand in good_hands:
-        return "raise"
-    return "fold"
+    return action
 
 
 
