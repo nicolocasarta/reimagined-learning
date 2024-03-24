@@ -1,4 +1,6 @@
+from utils.util import jason_to_dict
 
+PREFLOP_ACTION = jason_to_dict("preflop_action.json")
 
 #check if user action matches the correct response
 def action_check(position, hand, action):
