@@ -1,6 +1,6 @@
 def check_poker_move(position, hand, action):
 
-    accepted_positions = ["utg", "utg+1", "lj"]
+    accepted_positions = ["utg", "utg+1", "lj", "btn"]
     # Check Position
     if position not in accepted_positions:
         return 'Error: Position Not Acceptable.'
