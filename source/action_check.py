@@ -1,4 +1,4 @@
-from utils.util import jason_to_dict
+from source.utils.util import jason_to_dict
 
 PREFLOP_ACTION = jason_to_dict("preflop_action.json")
 
@@ -26,16 +26,21 @@ def action_check(position, hand, action):
 
 def preflop_utg_action(hand):
 
-    #hands that the user should raise when in utg position
-    good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
-    "ako", "aqo", "kk", "kqs", "kjs", "kts", "k9s", "kqo", "qq", "qjs", "qts", "jj", "jts", "tt", "99",
-    "88", "77", "65s"]
+    utg = PREFLOP_ACTION["utg_action"]
+    action = utg[hand]
 
-    # if the user's hand is a good hand, then raise
-    if hand in good_hands:
-        return "raise"
-    # otherwise fold
-    return "fold"
+    return action
+
+    # #hands that the user should raise when in utg position
+    # good_hands = ["aa", "aks", "aqs", "ajs", "ats", "a9s", "a8s", "a7s", "a6s", "a5s", "a4s", "a3s",
+    # "ako", "aqo", "kk", "kqs", "kjs", "kts", "k9s", "kqo", "qq", "qjs", "qts", "jj", "jts", "tt", "99",
+    # "88", "77", "65s"]
+
+    # # if the user's hand is a good hand, then raise
+    # if hand in good_hands:
+    #     return "raise"
+    # # otherwise fold
+    # return "fold"
 
 
 def preflop_utg1_action(hand):
