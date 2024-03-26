@@ -1,4 +1,4 @@
-from source.action_check import action_check
+from source.action_check import action_check, get_correct_action
 from source.cards import to_simple_hand
 from source.cards import simple_hand_reorder
 from source.preflop import check_poker_move
@@ -21,7 +21,8 @@ def main():
 
     simple_hand = to_simple_hand(user_hand)
     simple_hand = simple_hand_reorder(simple_hand)
-    action_check(user_position, simple_hand, user_action)
+    correct_action = get_correct_action(user_position, simple_hand)
+    action_check(correct_action, user_action)
     
     
 if __name__ == "__main__":
