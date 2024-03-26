@@ -1,5 +1,5 @@
 {
-    "btn_action": {
+    "btn": {
         "aa": "raise",
         "kk": "raise",
         "qq": "raise",
@@ -170,7 +170,7 @@
         "32o": "fold",
         "32s": "fold"
     },
-    "lj_action": {
+    "lj": {
         "aa": "raise",
         "kk": "raise",
         "qq": "raise",
@@ -341,7 +341,7 @@
         "32o": "fold",
         "32s": "fold"
     },
-    "utg1_action": {
+    "utg1": {
         "aa": "raise",
         "kk": "raise",
         "qq": "raise",
@@ -512,7 +512,7 @@
         "32o": "fold",
         "32s": "fold"
     },
-    "utg_action": {
+    "utg": {
         "aa": "raise",
         "kk": "raise",
         "qq": "raise",
