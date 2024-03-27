@@ -15,8 +15,10 @@ def action_check(correct_action, user_action):
 
     if (user_action == correct_action):
         print("Your decision to " + user_action.upper() + " was CORRECT!")
+        return True
     else:
         print("Your decision to " + user_action.upper() + " was INCORRECT!")
+        return False
 
 
 

@@ -4,6 +4,10 @@ from tests.utils.util import get_data
 
 
 
+@pytest.mark.parametrize("correct_action, user_action, match", get_data("action_check.csv"))
+def test_action_check(correct_action, user_action, match):
+    assert action_check.action_check(correct_action, user_action) == eval(match)
+
 @pytest.mark.parametrize("hand, expected_action", get_data("preflop_utg_action_test.csv"))
 def test_preflop_utg_action(hand, expected_action):
     assert action_check.get_correct_action("utg", hand) == expected_action
