@@ -1083,7 +1083,7 @@
         "k4s": "call",
         "k3o": "call",
         "k3s": "call",
-        "k2o": "fold",
+        "k2o": "call",
         "k2s": "call",
         "qjo": "call",
         "qjs": "bet",
