@@ -27,3 +27,7 @@ def test_preflop_lj_action(hand, expected_action):
 @pytest.mark.parametrize("hand, expected_action", get_data("preflop_hj_action_test.csv"))
 def test_preflop_hj_action(hand, expected_action):
     assert action_check.get_correct_action("hj", hand) == expected_action
+
+@pytest.mark.parametrize("hand, expected_action", get_data("preflop_co_action_test.csv"))
+def test_preflop_co_action(hand, expected_action):
+    assert action_check.get_correct_action("co", hand) == expected_action
