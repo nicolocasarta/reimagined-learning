@@ -1,7 +1,7 @@
 from source.action_check import action_check, get_correct_action
 from source.cards import to_simple_hand
 from source.cards import simple_hand_reorder
-from source.preflop import check_poker_move
+from source.check_inputs import check_poker_move
 
 
 

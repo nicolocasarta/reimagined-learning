@@ -10,37 +10,23 @@ def check_poker_move(position, hand, action):
         return 'Error: Invalid Poker Hand' 
 
     #Valid cards
-    cardArray = ['a','k','q','j','2','3','4','5','6','7','8','9','t']
+    card_list = ['a','k','q','j','2','3','4','5','6','7','8','9','t']
     
-    valid = 0
-
+    
     #Checks first and third position for valid card values
-
-    for i in cardArray:
-        if hand[0] == i:
-            valid += 1
-        if hand[2] == i:
-            valid += 1
-
-    if valid != 2:
-        return 'Error: Invalid Poker Hand'      
+    if hand[0] not in card_list or hand[2] not in card_list:
+        return 'Error: Invalid Poker Hand'
+        
    
    #Valid suits
-    
-    suitArray = ['s','d','h','c']
+    suit_list = ['s','d','h','c']
 
     #Checks second and fourth position for valid suit values
-
-    for i in suitArray:
-        if hand[1] == i:
-            valid += 1
-        if hand[3] == i:
-            valid += 1
-
-    if valid != 4:
-        return 'Error: Invalid Poker Hand'  
+    if hand[1] not in suit_list or hand[3] not in suit_list:
+        return 'Error: Invlaid Poker Hand'
     
     
+    # Checks if duplicate ranks have same suit
     if hand[0] == hand[2]:
         if hand[1] == hand[3]:
             return 'Error: Invalid Poker Hand'
