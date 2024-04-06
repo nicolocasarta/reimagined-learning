@@ -23,7 +23,7 @@ def check_poker_move(position, hand, action):
 
     #Checks second and fourth position for valid suit values
     if hand[1] not in suit_list or hand[3] not in suit_list:
-        return 'Error: Invlaid Poker Hand'
+        return 'Error: Invalid Poker Hand'
     
     
     # Checks if duplicate ranks have same suit
