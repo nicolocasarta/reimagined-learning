@@ -47,7 +47,7 @@ def check_poker_move(position, hand, action):
 
 
     # Check Action
-    if action.lower() not in ['raise', 'fold']:
+    if action.lower() not in ['raise', 'fold', "bet", "call"]:
         return 'Error: Action must be either "raise" or "fold".'
 
     # If all checks passed, return 'Correct'

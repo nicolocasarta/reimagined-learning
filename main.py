@@ -10,7 +10,7 @@ def main():
     while True:
         user_position = input("Enter position (UTG, UTG+1, LJ, HJ, CO, SB, BTN): ").lower().replace(" ","")
         user_hand = input("Enter hand (e.g., 'AsKd', '2h3c'): ").lower().replace(" ","")
-        user_action = input("Enter action (raise or fold): ").lower().replace(" ","")
+        user_action = input("Enter action (raise, fold, bet, or call): ").lower().replace(" ","")
 
         result = check_poker_move(user_position, user_hand, user_action)
         if result == 'Correct':
