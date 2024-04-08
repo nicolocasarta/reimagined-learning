@@ -1,4 +1,0 @@
-correct action,user action,match
-raise,raise,True
-raise,fold,False
-fold,fold,True

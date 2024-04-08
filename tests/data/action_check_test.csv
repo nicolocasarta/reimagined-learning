@@ -1,0 +1,11 @@
+correct action,user action,match
+raise,raise,True
+raise,fold,False
+raise,bet,False
+raise,call,False
+fold,fold,True
+fold,bet,False
+fold,call,False
+bet,bet,True
+bet,call,False
+call,call,True
