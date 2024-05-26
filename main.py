@@ -9,7 +9,7 @@ def main():
 
     while True:
         user_position = input("Enter position (UTG, UTG+1, LJ, HJ, CO, SB, BTN): ").lower().replace(" ","")
-
+       
         result = check_position(user_position)
         if result == True:
             break
