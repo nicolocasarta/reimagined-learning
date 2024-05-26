@@ -1,0 +1,5 @@
+action,message
+raiise,Error: Action must be raise or fold or bet or call
+beet, Error: Action must be raise or fold or bet or call
+cal, Error: Action must be raise or fold or bet or call
+folded, Error: Action must be raise or fold or bet or call
