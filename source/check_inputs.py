@@ -1,10 +1,13 @@
-def check_poker_move(position, hand, action):
 
-    accepted_positions = ["utg", "utg+1", "lj", "btn"]
+def check_position(position):
+
+    accepted_positions = ["utg", "utg+1", "lj","hj", "co", "sb", "btn"]
     # Check Position
     if position not in accepted_positions:
         return 'Error: Position Not Acceptable.'
+    return True
 
+def check_hand(hand):
     # Check Hand
     if len(hand) != 4:
         return 'Error: Invalid Poker Hand' 
@@ -30,11 +33,14 @@ def check_poker_move(position, hand, action):
     if hand[0] == hand[2]:
         if hand[1] == hand[3]:
             return 'Error: Invalid Poker Hand'
+        
 
+    return True
 
+def check_action(action):
     # Check Action
-    if action.lower() not in ['raise', 'fold']:
-        return 'Error: Action must be either "raise" or "fold".'
+    if action.lower() not in ['raise', 'fold', 'bet', 'call']:
+        return "Error: Action must be raise or fold or bet or call"
 
     # If all checks passed, return 'Correct'
-    return 'Correct'
+    return True
